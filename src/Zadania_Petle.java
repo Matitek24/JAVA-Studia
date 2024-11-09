@@ -16,7 +16,7 @@ public class Zadania_Petle {
             Zadania_Petle::ppj_6,
             Zadania_Petle::ppj_7,
             Zadania_Petle::ppj_8,
-            Zadania_Petle::ppj_9
+            Zadania_Petle::ppj_9,
         };
 
         for(int i = 1; i<= zadania.length; i++){
@@ -113,4 +113,5 @@ public class Zadania_Petle {
        boolean second = rok % 400 == 0;
         System.out.println((first || second ? "Przestepny ": "Normalny "));
     }
+
 }
