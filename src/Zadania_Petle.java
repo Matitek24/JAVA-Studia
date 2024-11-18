@@ -6,26 +6,37 @@ public class Zadania_Petle {
         System.out.println("Podaj zadanie ktore chcesz: ");
         int funkcja = in.nextInt();
 
-        Runnable[] zadania = {
-            null,
-            Zadania_Petle::ppj_1,
-            Zadania_Petle::ppj_2,
-            Zadania_Petle::ppj_3,
-            Zadania_Petle::ppj_4,
-            Zadania_Petle::ppj_5,
-            Zadania_Petle::ppj_6,
-            Zadania_Petle::ppj_7,
-            Zadania_Petle::ppj_8,
-            Zadania_Petle::ppj_9,
-        };
-
-        for(int i = 1; i<= zadania.length; i++){
-            if(i == funkcja){
-                zadania[i].run();
-                return;
-            }
+        switch (funkcja) {
+            case 1:
+                Zadania_Petle.ppj_1();
+                break;
+            case 2:
+                Zadania_Petle.ppj_2();
+                break;
+            case 3:
+                Zadania_Petle.ppj_3();
+                break;
+            case 4:
+                Zadania_Petle.ppj_4();
+                break;
+            case 5:
+                Zadania_Petle.ppj_5();
+                break;
+            case 6:
+                Zadania_Petle.ppj_6();
+                break;
+            case 7:
+                Zadania_Petle.ppj_7();
+                break;
+            case 8:
+                Zadania_Petle.ppj_8();
+                break;
+            case 9:
+                Zadania_Petle.ppj_9();
+                break;
+            default:
+                System.out.println("Podaj inne zadanie");
         }
-        System.out.println("Podaj inne zadanie");
     }
 
     // Zadania Ćwiczenia PPJ

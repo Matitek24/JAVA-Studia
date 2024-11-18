@@ -10,17 +10,19 @@ public class Algorytmy {
                 "3. Provide Xs number of fibonacci sequence.\n " +
                         " Choose algoritm: " );
         int num = input.nextInt();
-        Runnable[] zadania = {
-                null,
-                Algorytmy::Prime,
-                Algorytmy::narcissistic,
-                Algorytmy::fibonnaci
-        };
-        for (int i = 0; i < zadania.length; i++) {
-            if(num == i) {
-            zadania[i].run();
-            return;
-            }
+        switch (num) {
+            case 1:
+                Algorytmy.Prime();
+                break;
+            case 2:
+                Algorytmy.narcissistic();
+                break;
+            case 3:
+                Algorytmy.fibonnaci();
+                break;
+
+            default:
+                System.out.println("Podaj inne zadanie");
         }
     }
     public static void Prime(){
