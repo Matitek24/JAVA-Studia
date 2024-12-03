@@ -15,6 +15,7 @@ public class switch_1 {
                 switch_1::zad6,
                 null,
                 switch_1::zad8,
+                switch_1::zad9,
         };
         for (int i = 0; i < zadania.length; i++) {
             if (zad == i) {
@@ -114,6 +115,16 @@ public class switch_1 {
     }
     public static void zad8() {
         Scanner sc = new Scanner(System.in);
+
+    }
+    public static void zad9() {
+
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i + " jest parzyste");
+            }
+        }
+
 
     }
 

@@ -1,6 +1,18 @@
 import java.util.Scanner;
 
 public class Zadania_Petle {
+
+    enum DzieńTygodnia {
+        PONIEDZIAŁEK,
+        WTOREK,
+        ŚRODA,
+        CZWARTEK,
+        PIĄTEK,
+        SOBOTA,
+        NIEDZIELA
+    }
+
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Podaj zadanie ktore chcesz: ");
@@ -33,6 +45,9 @@ public class Zadania_Petle {
                 break;
             case 9:
                 Zadania_Petle.ppj_9();
+                break;
+            case 10:
+                Zadania_Petle.nauka();
                 break;
             default:
                 System.out.println("Podaj inne zadanie");
@@ -124,5 +139,34 @@ public class Zadania_Petle {
        boolean second = rok % 400 == 0;
         System.out.println((first || second ? "Przestepny ": "Normalny "));
     }
+    public static void nauka(){
+        DzieńTygodnia dzisiaj = DzieńTygodnia.WTOREK;
 
+        // Użycie enum w instrukcji switch
+        switch (dzisiaj) {
+            case PONIEDZIAŁEK:
+                System.out.println("Dziś jest poniedziałek.");
+                break;
+            case WTOREK:
+                System.out.println("Dziś jest wtorek.");
+                break;
+            case ŚRODA:
+                System.out.println("Dziś jest środa.");
+                break;
+            case CZWARTEK:
+                System.out.println("Dziś jest czwartek.");
+                break;
+            case PIĄTEK:
+                System.out.println("Dziś jest piątek.");
+                break;
+            case SOBOTA:
+                System.out.println("Dziś jest sobota.");
+                break;
+            case NIEDZIELA:
+                System.out.println("Dziś jest niedziela.");
+                break;
+            default:
+                System.out.println("Nieprawidłowy dzień.");
+        }
+    }
 }
